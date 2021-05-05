@@ -5,11 +5,7 @@ from PIL import Image
 import sys
 
 
-def inference():
-    assert(len(sys.argv) == 3)
-    model_path = sys.arv[1]
-    img_path = sys.argv[2]
-
+def inference(model_path, img_path):
     transform = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
